@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## SA:MP Fresh
 
 You can use the [editor on GitHub](https://github.com/le01q/samp-fresh/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
