@@ -1,4 +1,5 @@
 from winreg import OpenKey, QueryValueEx, SetValueEx, HKEY_CURRENT_USER, KEY_READ, KEY_ALL_ACCESS, REG_SZ
+from socket import gethostbyname, socket, AF_INET, SOCK_DGRAM
 from subprocess import call, check_output
 from pypresence import Presence
 from time import sleep
@@ -8,15 +9,13 @@ from constants import *
 class SampFresh:
 
     def __init__(self, client_id):
-        self.samp_path = None
-        self.player_name = None
-        self.host = None
-        self.port = 7777
-        self.address = None
+        self.samp_path = self.player_name = self.host = self.address = None
+        self.port = 7777 # default port
         self.presence = Presence(client_id)
-        self.gta_running = False
-        self.samp_running = False
-
+        self.sock = socket(AF_INET, SOCK_DGRAM)
+        self.query_header = b'SAMP'
+        self.gta_running = self.samp_running = False
+    
     def IsProcessRunning(self, process_name):
         return True if process_name in check_output("tasklist", universal_newlines=True) else False
 
