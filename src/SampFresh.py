@@ -5,11 +5,15 @@ from PyQt5.QtWidgets import QMainWindow, QMessageBox, QTableWidgetItem
 from gui import Ui_MainWindow
 from pypresence import Presence
 from core import Core
+from time import time, sleep
+from threading import Thread
+from screeninfo import get_monitors
 
 
 class SampFresh(QMainWindow):
-    gta_running = False
-    player_name = samp_path = ''
+    gta_running = choosing_monitor = False
+    screens = get_monitors()
+    player_name = samp_path = address = ''
 
     def __init__(self, app, client_id):
         super().__init__()
@@ -34,7 +38,6 @@ class SampFresh(QMainWindow):
     def AddNewServer(self, hostname=None, address=False, savefile=True):
         if not address:
             address = self.ui.addressLine.text()
-            print(address)
         if not self.core.IsValidAddress(address):
             return
         position = int(self.ui.tableWidget.rowCount())
@@ -52,9 +55,15 @@ class SampFresh(QMainWindow):
         for server in servers:
             if server != '\n':
                 splitted = server.split(',')
-                print(splitted)
                 self.AddNewServer(
                     hostname=splitted[0], address=splitted[1], savefile=False)
+
+    def SaveConfiguration(self):
+        data = {
+            'discordrpc': self.DiscordEnabled(),
+            'sampfavorites': False, 
+        }
+        self.core.SaveConfig(**data)
 
     def SaveServers(self):
         table = self.ui.tableWidget
@@ -90,32 +99,54 @@ class SampFresh(QMainWindow):
         msg.show()
         return
 
+    def DiscordEnabled(self):
+        return self.ui.discordCheckbox.isChecked()
+
     def GetSelectedServer(self):
         indexes = self.ui.tableWidget.selectionModel().selectedRows()
         if not indexes:
             return False
         selected = indexes[0]
-        address = self.ui.tableWidget.item(selected.row(), 1).text()
-        return address
+        self.address = self.ui.tableWidget.item(selected.row(), 1).text()
+        return self.address
 
     def Connect(self):
         if not self.samp_path:
             return self.error('SA:MP not found', 'SA:MP is not installed on your machine.', 'Install SA:MP to continue.')
+
         if self.core.IsProcessRunning('gta_sa.exe'):
             return self.error('GTA process', 'GTA is currently running.', 'Close it to connect.')
+
         if not self.GetSelectedServer():
-            self.error('Invalid server', "Can't connect to 'Empty' server.",
-                       'Select a server to continue.', icon=QMessageBox.Warning)
+            return self.error('Invalid server', "Can't connect to 'Empty' server.", 'Select a server to continue.', icon=QMessageBox.Warning)
 
-        address = self.GetSelectedServer()
+        self.address = self.GetSelectedServer()
+        self.choosing_monitor = len(self.screens) > 1
+        self.core.StartProcess([self.samp_path, self.address])
+        self.gta_running = True
 
-        if self.ui.discordCheckbox.isChecked():
-            print('Executing discord rich presence..')
+        if self.DiscordEnabled():
             self.presence.connect()
-            self.presence.update(details="Playing in " + address)
-       
-        self.core.StartProcess([self.samp_path, address])
+            data = {
+                #'state': 'A samp server', next update
+                'details': 'Playing ' + self.address,
+                'start': time(),
+                'large_image': 'sampfresh',
+                'large_text': 'SA:MP Fresh',
+            }
+            self.presence.update(**data)
 
+        self.thread = Thread(target=self.OnUpdate)
+        self.thread.start()
+        self.thread.join()
+
+    def OnUpdate(self):
+        while self.gta_running:
+            if not self.core.IsProcessRunning('gta_sa.exe'):
+                if self.DiscordEnabled():
+                    self.presence.close()
+                self.gta_running = False
+        return
 
     def ConnectElements(self):
         # buttons
@@ -125,8 +156,8 @@ class SampFresh(QMainWindow):
 
         # checkboxes
         self.ui.favServersCheckbox.setCheckable(False)
-        # self.ui.discordCb.stateChanged.connect(self.connect_discord)
-        # self.ui.favServersCheckbox.stateChanged.connect(self.favorite_servers)
+        self.ui.discordCheckbox.stateChanged.connect(self.SaveConfiguration)
+        # self.ui.favServersCheckbox.stateChanged.connect(self.SaveConfiguration)
 
         self.ui.nicknameLine.textChanged.connect(self.OnChangePlayerName)
         self.ui.tableWidget.cellClicked.connect(self.SelectServer)
@@ -135,10 +166,17 @@ class SampFresh(QMainWindow):
     def OpenGithubRepo(self):
         self.core.OpenUrl('https://github.com/le01q/samp-fresh')
 
+    def LoadConfig(self):
+        data = self.core.LoadConfig()
+        if not data:
+            return
+        self.ui.discordCheckbox.setChecked(data['discordrpc'])
+
     def Initialize(self):
         self.ConnectElements()
         self.GetSampPath()
         self.LoadServers()
+        self.LoadConfig()
         if self.samp_path:
             self. ui.nicknameLine.setText(self.GetPlayerName())
         self.gta_running = self.core.IsProcessRunning('gta_sa.exe')

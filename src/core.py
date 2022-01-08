@@ -56,6 +56,28 @@ class Core:
             return False
         return True
 
+    def SaveConfig(self, discordrpc, sampfavorites):
+        if platform == 'win32':
+            makedirs(self.path, exist_ok=True)
+        file = open(f'{self.path}/config.txt', 'w')
+        file.write(f'discordrpc={discordrpc}\nsampfavorites={sampfavorites}')
+        file.close()
+    
+    def strtobool(self, str):
+        return str.lower() in ['true']
+
+    def LoadConfig(self):
+        data = {}
+        try:
+            file = open(f'{self.path}/config.txt', 'r')
+            lines = file.readlines()
+            sampfavorites = self.strtobool(lines[1].split('=')[1].strip())
+            data['discordrpc'] = self.strtobool(lines[0].split('=')[1].strip())
+            data['sampfavorites'] = self.strtobool(lines[1].split('=')[1].strip())
+        except Exception as e:
+            pass
+        return data
+
     def LoadServersData(self):
         lines = []
         try:
