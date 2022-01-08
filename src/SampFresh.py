@@ -7,12 +7,11 @@ from pypresence import Presence
 from core import Core
 from time import time, sleep
 from threading import Thread
-from screeninfo import get_monitors
+from requests import get
 
 
 class SampFresh(QMainWindow):
     gta_running = choosing_monitor = False
-    screens = get_monitors()
     player_name = samp_path = address = ''
 
     def __init__(self, app, client_id):
@@ -112,16 +111,15 @@ class SampFresh(QMainWindow):
 
     def Connect(self):
         if not self.samp_path:
-            return self.error('SA:MP not found', 'SA:MP is not installed on your machine.', 'Install SA:MP to continue.')
+            return self.error('SA:MP Not Found', 'SA:MP is not installed on your machine.', 'Install SA:MP to continue.')
 
         if self.core.IsProcessRunning('gta_sa.exe'):
-            return self.error('GTA process', 'GTA is currently running.', 'Close it to connect.')
+            return self.error('GTA Process', 'GTA is currently running.', 'Close it to connect.')
 
         if not self.GetSelectedServer():
-            return self.error('Invalid server', "Can't connect to 'Empty' server.", 'Select a server to continue.', icon=QMessageBox.Warning)
+            return self.error('Invalid Server', "Can't connect to 'Empty' server.", 'Select a server to continue.', icon=QMessageBox.Warning)
 
         self.address = self.GetSelectedServer()
-        self.choosing_monitor = len(self.screens) > 1
         self.core.StartProcess([self.samp_path, self.address])
         self.gta_running = True
 
@@ -172,11 +170,25 @@ class SampFresh(QMainWindow):
             return
         self.ui.discordCheckbox.setChecked(data['discordrpc'])
 
+    def CheckUpdates(self):
+        res = get('https://api.github.com/repos/le01q/samp-fresh/releases')
+        try:
+            res.raise_for_status()
+        except:
+            return self.error('SA:MP Fresh Updates', "Can't check new updates", icon=QMessageBox.Critical)
+        versions = []
+        for key in res.json():
+            versions.append(key['tag_name'])
+        if versions[0] != self.core.VERSION:
+            return self.error('SA:MP Fresh Updates', f"A new update {versions[0]} is available", f'Your current version is {self.core.VERSION}', icon=QMessageBox.Warning)
+
     def Initialize(self):
         self.ConnectElements()
         self.GetSampPath()
         self.LoadServers()
         self.LoadConfig()
+        self.CheckUpdates()
         if self.samp_path:
             self. ui.nicknameLine.setText(self.GetPlayerName())
         self.gta_running = self.core.IsProcessRunning('gta_sa.exe')
+        self.ui.label_11.setText(f'Version: {self.core.VERSION}')

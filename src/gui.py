@@ -7,6 +7,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        MainWindow.setWindowIcon(QtGui.QIcon('sampfreshdark.jpg'))
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(628, 487)
         MainWindow.setFixedSize(628, 487)
@@ -276,6 +277,17 @@ class Ui_MainWindow(object):
         font.setFamily("Arial Black")
         font.setBold(True)
         font.setWeight(75)
+        self.label_11 = QtWidgets.QLabel(self.gridLayoutWidget_2)
+        font = QtGui.QFont()
+        font.setFamily("Tw Cen MT Condensed")
+        font.setPointSize(12)
+        font.setBold(False)
+        font.setWeight(50)
+        font.setStrikeOut(False)
+        self.label_11.setFont(font)
+        self.label_11.setStyleSheet("color: rgb(172, 172, 172);")
+        self.label_11.setObjectName("label_11")
+        self.gridLayout_2.addWidget(self.label_11, 8, 2, 1, 1, QtCore.Qt.AlignRight)
         self.menubar.setFont(font)
         self.menubar.setStyleSheet("color: rgb(255, 255, 255);\n"
 "selection-background-color: rgb(255, 255, 255);\n"
@@ -309,6 +321,7 @@ class Ui_MainWindow(object):
         self.discordCheckbox.setText(_translate("MainWindow", "Connect with Discord"))
         self.label_7.setText(_translate("MainWindow", "Enables a discord Rich Presence"))
         self.label_10.setText(_translate("MainWindow", "Uses your samp favorite servers"))
+        self.label_11.setText(_translate("MainWindow", "Version 0.0.1"))
         self.connectBtn.setText(_translate("MainWindow", "Connect"))
         self.addBtn.setText(_translate("MainWindow", "Add Server"))
         self.deleteBtn.setText(_translate("MainWindow", "Delete Server"))

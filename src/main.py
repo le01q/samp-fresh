@@ -6,6 +6,6 @@ from sampfresh import SampFresh
 
 if __name__ == "__main__":
     app = QApplication(argv)
-    window = SampFresh(app, :o)
+    window = SampFresh(app, 929135097154768988)
     window.show()
     exit(app.exec_())

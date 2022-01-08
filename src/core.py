@@ -5,6 +5,7 @@ from os import getenv, makedirs
 
 
 class Core:
+    VERSION = '0.0.1'
     if platform == 'win32':
         path = getenv('USERPROFILE') + r'\Documents\SAMPFresh'
 
