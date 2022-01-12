@@ -1,16 +1,18 @@
 from winreg import OpenKey, QueryValueEx, SetValueEx, HKEY_CURRENT_USER, KEY_READ, KEY_ALL_ACCESS, REG_SZ
-from subprocess import call, check_output, Popen
+from subprocess import call, check_output, Popen, PIPE
+from os import getenv, makedirs, path
 from sys import platform
-from os import getenv, makedirs
-
+from requests import get
 
 class Core:
-    VERSION = '0.0.1'
+    
+    VERSION = '0.0.2'
     if platform == 'win32':
         path = getenv('USERPROFILE') + r'\Documents\SAMPFresh'
+    special_servers = get('https://raw.githubusercontent.com/le01q/samp-fresh/main/data/server_logos.csv').text.split('\n') 
 
     def IsProcessRunning(self, process_name):
-        return True if process_name in check_output("tasklist", universal_newlines=True) else False
+        return True if process_name in check_output("tasklist", shell=True, stderr=PIPE, universal_newlines=True) else False
 
     def StartProcess(self, args=[]):
         call(args)
@@ -78,8 +80,25 @@ class Core:
         except Exception as e:
             pass
         return data
+    
+    def LoadSampFavoriteServers(self):
+        servers = []
+        file = open(path.expanduser(r'~\Documents\GTA San Andreas User Files\SAMP\USERDATA.DAT'), 'rb')
+        file.seek(8) # header
+        server_count = int.from_bytes(file.read(4), 'little')
+        counter = 0
+        while counter < server_count:
+            ip_len = int.from_bytes(file.read(4), 'little')
+            server_ip = file.read(ip_len).decode()
+            server_port = int.from_bytes(file.read(4), 'little')
+            name_len = int.from_bytes(file.read(4), 'little')
+            server_name = file.read(name_len).decode('unicode_escape')
+            servers.append((server_name, server_ip, server_port))
+            file.read(8)
+            counter += 1
+        return servers
 
-    def LoadServersData(self):
+    def LoadFavoriteServers(self):
         lines = []
         try:
             file = open(f'{self.path}/servers.txt', 'r')
@@ -89,7 +108,7 @@ class Core:
             pass
         return lines
 
-    def SaveServersData(self, servers):
+    def SaveFavoriteServers(self, servers):
         if platform == 'win32':
             makedirs(self.path, exist_ok=True)
         file = open(f'{self.path}/servers.txt', 'w')
@@ -97,3 +116,14 @@ class Core:
             if server:
                 file.write(f'{server[0]},{server[1]}\n')
         file.close()
+
+    def GetServerLogo(self, address):
+        for server in self.special_servers:
+            if server.split(',')[0].strip() == address:
+                return server.split(',')[1].strip()
+    
+    def IsSpecialAddress(self, address):
+        for server in self.special_servers:
+            if server.split(',')[0].strip() == address:
+                return True
+        return False
