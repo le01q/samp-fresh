@@ -14,9 +14,13 @@ Custom Launcher for SA:MP with new features
 > Requires SA:MP and GTA:SA installed
 
 ## Add your own server logo
-You can add your own server logo for the Discord Rich Presence, to do this you need to make a pull request in `data/server.logos_csv` adding the server IP address and name.
+You can add your own server logo, to do this you need to make an [issue](https://github.com/le01q/samp-fresh/issues) with the next configuration
 
-After completing this step, contact us through discord `ne0de#7164`
+- `Title:` your server name
+- `Description:` your server IP Address
+- `Attach:` your server logo (512x512px)
+- `Labels:` logo-request
+
 <p align="center">
 <img src="https://github.com/le01q/samp-fresh/blob/main/assets/rpc.png?raw=true" title="rpc">
 </p>
