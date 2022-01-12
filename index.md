@@ -24,6 +24,10 @@ After completing this step, contact us through discord `ne0de#7164`
 ## Supported OS
 - Windows
 
+## Credits
+- [pypresence](https://github.com/qwertyquerty/pypresence)
+- [SA-MP](https://www.sa-mp.com/)
+
 ## Launcher picture
 <p align="center">
 <img src="https://github.com/le01q/samp-fresh/blob/main/assets/program.png?raw=true" title="example">
