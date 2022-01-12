@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>628</width>
-    <height>487</height>
+    <width>1046</width>
+    <height>526</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -37,285 +37,16 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>0</y>
-      <width>601</width>
-      <height>445</height>
+      <y>10</y>
+      <width>691</width>
+      <height>471</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="6" column="1">
-      <spacer name="verticalSpacer">
-       <property name="orientation">
-        <enum>Qt::Vertical</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>20</width>
-         <height>40</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
      <item row="1" column="0">
-      <spacer name="horizontalSpacer">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="10" column="2" alignment="Qt::AlignRight">
-      <widget class="QLabel" name="label_9">
-       <property name="font">
-        <font>
-         <family>Tw Cen MT Condensed</family>
-         <pointsize>12</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-         <strikeout>false</strikeout>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(172, 172, 172);</string>
-       </property>
-       <property name="text">
-        <string> © 2021 - 2022 ne0de and le01q</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0" alignment="Qt::AlignRight">
-        <widget class="QLabel" name="label_3">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>40</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-           <strikeout>false</strikeout>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(172, 172, 172);</string>
-         </property>
-         <property name="text">
-          <string>SA:MP</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="label_4">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>40</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-           <strikeout>false</strikeout>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(0, 112, 3);</string>
-         </property>
-         <property name="text">
-          <string>FRESH</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="2" alignment="Qt::AlignHCenter">
-        <widget class="QLabel" name="label_2">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>18</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-           <strikeout>false</strikeout>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(172, 172, 172);</string>
-         </property>
-         <property name="text">
-          <string>A custom Launcher for SA:MP</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="0" column="2">
-      <layout class="QGridLayout" name="gridLayout_5">
-       <item row="2" column="0" alignment="Qt::AlignLeft">
-        <widget class="QCheckBox" name="connectCheckbox">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Use SA:MP favorite servers</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0" alignment="Qt::AlignLeft">
-        <widget class="QCheckBox" name="favServersCheckbox">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);</string>
-         </property>
-         <property name="text">
-          <string>Connect with Discord</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
-        <widget class="QLabel" name="label_7">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>12</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-           <strikeout>false</strikeout>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(172, 172, 172);</string>
-         </property>
-         <property name="text">
-          <string>Enables a discord Rich Presence</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_10">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>12</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-           <strikeout>false</strikeout>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(172, 172, 172);</string>
-         </property>
-         <property name="text">
-          <string>Uses your samp favorite servers</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="8" column="0">
-      <spacer name="horizontalSpacer_2">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item row="6" column="2">
-      <widget class="QPushButton" name="connectBtn">
-       <property name="font">
-        <font>
-         <family>Tw Cen MT Condensed</family>
-         <pointsize>18</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-selection-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);
-background-color:rgb(0, 112, 3);</string>
-       </property>
-       <property name="text">
-        <string>Connect</string>
-       </property>
-      </widget>
-     </item>
-     <item row="10" column="0">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLineEdit" name="addressLine">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">border-color: rgb(255, 255, 255);
-selection-background-color: rgb(0, 85, 0);
-color: rgb(255, 255, 255);</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="addBtn">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>18</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-selection-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);
-background-color: rgb(0, 109, 0);</string>
-         </property>
-         <property name="text">
-          <string>Add Server</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="deleteBtn">
-         <property name="font">
-          <font>
-           <family>Tw Cen MT Condensed</family>
-           <pointsize>18</pointsize>
-          </font>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-selection-color: rgb(255, 255, 255);
-border-color: rgb(255, 255, 255);
-background-color: rgb(170, 0, 0);</string>
-         </property>
-         <property name="text">
-          <string>Delete Server</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item row="2" column="0">
       <layout class="QGridLayout" name="gridLayout_4">
-       <item row="0" column="1" alignment="Qt::AlignLeft">
-        <widget class="QLabel" name="label_6">
+       <item row="0" column="2">
+        <widget class="QLabel" name="addressListLabel">
          <property name="font">
           <font>
            <family>Tw Cen MT Condensed</family>
@@ -333,8 +64,8 @@ background-color: rgb(170, 0, 0);</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_5">
+       <item row="0" column="1">
+        <widget class="QLabel" name="hostnameListLabel">
          <property name="font">
           <font>
            <family>Tw Cen MT Condensed</family>
@@ -354,47 +85,68 @@ background-color: rgb(170, 0, 0);</string>
        </item>
       </layout>
      </item>
-     <item row="5" column="2">
-      <widget class="QLineEdit" name="nicknameLine">
-       <property name="font">
-        <font>
-         <family>Tw Cen MT Condensed</family>
-         <pointsize>16</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-color: rgb(255, 255, 255);
-selection-background-color: rgb(0, 85, 0);
-color: rgb(255, 255, 255);</string>
-       </property>
-      </widget>
+     <item row="0" column="0">
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0" alignment="Qt::AlignRight">
+        <widget class="QLabel" name="sampTitleLabel">
+         <property name="font">
+          <font>
+           <family>Tw Cen MT Condensed</family>
+           <pointsize>40</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);</string>
+         </property>
+         <property name="text">
+          <string>SA:MP</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="freshTitleLabel">
+         <property name="font">
+          <font>
+           <family>Tw Cen MT Condensed</family>
+           <pointsize>40</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 112, 3);</string>
+         </property>
+         <property name="text">
+          <string>FRESH</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2" alignment="Qt::AlignHCenter">
+        <widget class="QLabel" name="subtitleLabel">
+         <property name="font">
+          <font>
+           <family>Tw Cen MT Condensed</family>
+           <pointsize>18</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+           <strikeout>false</strikeout>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(172, 172, 172);</string>
+         </property>
+         <property name="text">
+          <string>A custom Launcher for SA:MP</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </item>
-     <item row="7" column="2">
-      <layout class="QGridLayout" name="gridLayout_3"/>
-     </item>
-     <item row="1" column="2">
-      <layout class="QGridLayout" name="gridLayout_6"/>
-     </item>
-     <item row="4" column="2">
-      <widget class="QLabel" name="label_8">
-       <property name="font">
-        <font>
-         <family>Tw Cen MT Condensed</family>
-         <pointsize>18</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-         <strikeout>false</strikeout>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(172, 172, 172);</string>
-       </property>
-       <property name="text">
-        <string>Nickname</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0" rowspan="4">
+     <item row="2" column="0" rowspan="4">
       <widget class="QTableWidget" name="tableWidget">
        <property name="styleSheet">
         <string notr="true">border-color: rgb(255, 255, 127);
@@ -438,7 +190,7 @@ color: rgb(255, 255, 255);</string>
         <bool>true</bool>
        </property>
        <property name="rowCount">
-        <number>15</number>
+        <number>1</number>
        </property>
        <attribute name="horizontalHeaderVisible">
         <bool>false</bool>
@@ -447,7 +199,7 @@ color: rgb(255, 255, 255);</string>
         <bool>true</bool>
        </attribute>
        <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>200</number>
+        <number>350</number>
        </attribute>
        <attribute name="horizontalHeaderHighlightSections">
         <bool>true</bool>
@@ -472,28 +224,6 @@ color: rgb(255, 255, 255);</string>
          <string>1</string>
         </property>
        </row>
-       <row>
-        <property name="text">
-         <string>2</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>3</string>
-        </property>
-       </row>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
-       <row/>
        <column>
         <property name="text">
          <string>HostName</string>
@@ -514,27 +244,350 @@ color: rgb(255, 255, 255);</string>
          <string>www.googl.eocm</string>
         </property>
        </item>
-       <item row="1" column="0">
-        <property name="text">
-         <string/>
-        </property>
-       </item>
-       <item row="1" column="1">
-        <property name="text">
-         <string/>
-        </property>
-       </item>
-       <item row="2" column="0">
-        <property name="text">
-         <string/>
-        </property>
-       </item>
-       <item row="2" column="1">
-        <property name="text">
-         <string/>
-        </property>
-       </item>
       </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>10</y>
+      <width>321</width>
+      <height>178</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="4" column="0" colspan="2">
+      <widget class="QPushButton" name="deleteBtn">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+selection-color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+background-color: rgb(170, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Delete Server</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="hostnameLabel">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>HostName</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="hostnameLine">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(255, 255, 255);
+selection-background-color: rgb(0, 85, 0);
+color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="addressLabel">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Ip Address</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="addressLine">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(255, 255, 255);
+selection-background-color: rgb(0, 85, 0);
+color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0" colspan="2">
+      <widget class="QPushButton" name="addBtn">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+selection-color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+background-color: rgb(0, 85, 255);</string>
+       </property>
+       <property name="text">
+        <string>Add Server</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget_6">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>180</y>
+      <width>319</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="3" column="0" colspan="2">
+      <widget class="QPushButton" name="connectBtn">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);
+selection-color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+background-color:rgb(0, 112, 3);</string>
+       </property>
+       <property name="text">
+        <string>Connect</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QCheckBox" name="favServersCheckbox">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Connect with Discord</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0" colspan="2">
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="10" column="1">
+      <widget class="QLabel" name="copyrightLabel">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>© 2021 - 2022 ne0de and le01q</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1" alignment="Qt::AlignRight">
+      <widget class="QLabel" name="versionLabel">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Version 0.0.2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="2">
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item row="2" column="0" colspan="2">
+      <widget class="QLineEdit" name="addressLine_3">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>16</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border-color: rgb(255, 255, 255);
+selection-background-color: rgb(0, 85, 0);
+color: rgb(255, 255, 255);</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLabel" name="discordLabel">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Enables a Discord Rich Presence</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QCheckBox" name="favServersCheckbox_2">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>SA-MP Favorite servers</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLabel" name="sampFavoritesLabel">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>12</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Uses sa-mp favorite servers</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QLabel" name="nicknameLabel">
+       <property name="font">
+        <font>
+         <family>Tw Cen MT Condensed</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(172, 172, 172);</string>
+       </property>
+       <property name="text">
+        <string>Your Nickname</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="0" colspan="2">
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </widget>
@@ -544,7 +597,7 @@ color: rgb(255, 255, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>628</width>
+     <width>1046</width>
      <height>23</height>
     </rect>
    </property>
