@@ -7,14 +7,24 @@ Custom Launcher for SA:MP with new features
 > Still in development for more features
 
 ## Installation
-1. Download the last version from [here](https://github.com/le01q/samp-fresh/releases)
+1. Download the last version from [here](https://github.com/le01q/samp-fresh/releases/tag/0.0.1) `SAMPFresh.zip`
 2. Extract and open `SAMP Fresh.exe`
 3. Enjoy
 
 > Requires SA:MP and GTA:SA installed
+
+## Add your own server logo
+You can add your own server logo for the Discord Rich Presence, to do this you need to make a pull request in `data/server.logos_csv` adding the server IP address and name.
+
+After completing this step, contact us through discord `ne0de#7164`
+<p align="center">
+<img src="https://github.com/le01q/samp-fresh/blob/main/assets/rpc.png?raw=true" title="rpc">
+</p>
+
 ## Supported OS
 - Windows
-## Images
+
+## Launcher picture
 <p align="center">
 <img src="https://github.com/le01q/samp-fresh/blob/main/assets/program.png?raw=true" title="example">
 </p>
