@@ -8,7 +8,7 @@ Custom Launcher for SA:MP with new features
 
 ## Installation
 1. Download the last version from [here](https://github.com/le01q/samp-fresh/releases/tag/0.0.1) `SAMPFresh.zip`
-2. Extract and open `SAMP Fresh.exe`
+2. Extract and run `SAMP Fresh.exe`
 3. Enjoy
 
 > Requires SA:MP and GTA:SA installed
