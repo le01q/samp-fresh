@@ -21,10 +21,10 @@ class SampFresh:
 
     def SetKetValue(self, Key, Subkey, name, value):
         result = OpenKey(Key, Subkey, 0, KEY_ALL_ACCESS)
-        rewwturn SetValueEx(result, name, 0, REG_SZ, value)
+        return SetValueEx(result, name, 0, REG_SZ, value)
     
     def GetKeyValue(self, Key, Subkey, name):
-        rewwwwwwwwwsult = OpenKey(Key, Subkey, 0, KEY_READ)
+        result = OpenKey(Key, Subkey, 0, KEY_READ)
         return QueryValueEx(result, name)[0]
 
     def GetSampPath(self):
@@ -49,11 +49,11 @@ class SampFresh:
     def InputIp(self):
         while True:
             try:
-                ip = str(input("[>] Server IP: "))
+                ip = str(input("[SA:MP Fresh] Write the server IP address below: "))
                 host, port = ip.split(':')[0], ip.split(':')[1]
                 return host, port
             except IndexError:
-                self.message(Fore.RED, "Invalid IP, example: 192.56.67.8:7777")
+                self.message(Fore.RED, "[SA:MP Fresh | ERROR] Please specify a valid IP address.")
     
     def StartProcess(self, args=[]):
         call(args)
@@ -69,20 +69,19 @@ class SampFresh:
         if not self.GetPlayerName():
             raise Exception("Can't get player name")
         return
-        #return not self.IsProcessRunning('gta_sa.exe') and not self.IsProcessRunning('samp.exe')
     
     def DisplayBanner(self):
-        self.message(Fore.GREEN, LOGO)
-        self.message(Fore.YELLOW, "[>] Current nickname: " + self.player_name)
+        self.message(Fore.BLUE, PROJECT_LOGO)
+        self.message(Fore.YELLOW, "[SA:MP Fresh] Current nickname: " + self.player_name)
     
     def InputPlayerName(self):
         while True:
-            name = str(input('[>] New name: '))
+            name = str(input('[SA:MP Fresh] New nickname: '))
             if 4 <= len(name) < 24:
                 return name
         
     def PlayerNameEvent(self):
-        option = str(input('[?] Wanna change your nickname? (Yes or No): '))
+        option = str(input('[SA:MP Fresh] Wanna change your nickname game? (Y/N): '))
         if 'y' in option.lower():
             self.ChangePlayerName(self.InputPlayerName())
 
@@ -99,18 +98,12 @@ class SampFresh:
 
             self.StartProcess([self.samp_path, self.address])
 
-            self.presence.connect()
-
             while self.gta_running:
                 self.gta_running = self.IsProcessRunning('gta_sa.exe')
-                self.presence.update(details="Playing in " + self.address)
-                sleep(15)
-
-            self.presence.close()
+                self.message(Fore.GREEN, "[SA:MP Fresh] You have been connected to: " + self.address)
 
         except KeyboardInterrupt:
             return
-
 
 if __name__ == '__main__':
     client = SampFresh(':D')
