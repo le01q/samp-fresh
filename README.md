@@ -4,6 +4,7 @@ Custom Launcher for SA:MP with new features
 ## Features
 - Save/remove your favourite servers
 - Uses a Discord Rich Presence
+- CLI (To server connection in a simple way)
 > Still in development for more features
 
 ## Installation
@@ -27,6 +28,14 @@ You can add your own server logo, to do this you need to make an [issue](https:/
 
 ## Supported OS
 - Windows
+
+## CLI
+This launcher has a CLI that allows the same functionality as the launcher but in a simple and more direct way
+- This contains:
+  - Discord **RPC** application for the CLI
+  - Logo and formatting readable display
+  - IP address and name management
+  - Enjoyable interface
 
 ## Credits
 - [pypresence](https://github.com/qwertyquerty/pypresence)
