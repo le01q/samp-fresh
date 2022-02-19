@@ -34,6 +34,7 @@ This launcher has a CLI that allows the same functionality as the launcher but i
 <p>
 <img src="https://github.com/le01q/samp-fresh/blob/main/assets/cli.JPG?raw=true">
 </p>
+
 - This contains:
   - Discord **RPC** application for the CLI
   - Logo and formatting readable display
