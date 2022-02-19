@@ -31,6 +31,9 @@ You can add your own server logo, to do this you need to make an [issue](https:/
 
 ## CLI
 This launcher has a CLI that allows the same functionality as the launcher but in a simple and more direct way
+<p>
+<img src="https://github.com/le01q/samp-fresh/blob/main/assets/cli.JPG?raw=true">
+</p>
 - This contains:
   - Discord **RPC** application for the CLI
   - Logo and formatting readable display
