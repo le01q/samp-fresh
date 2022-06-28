@@ -1,23 +1,23 @@
-# :herb:SA:MP Fresh
+# :herb: SA:MP Fresh
 Custom Launcher for SA:MP with new features
 
-## ⏬Download
+## ⏬ Download
 The lastest release is available [here](https://github.com/le01q/samp-fresh/releases)
 
-## ✨Features
+## ✨ Features
 - Save/remove your favourite servers
 - Uses a Discord Rich Presence
 - CLI (To server connection in a simple way)
 > Still in development for more features
 
 
-## 📝Notes
+## 📝 Notes
 - Requires discord running and `Display current activity` enabled
 - Requires SA:MP and GTA:SA installed
 - If the rich presence doesn't work you can restart discord and try again
 - This app only works in Windows.
 
-## 🆕Add your own server logo
+## 🆕 Add your own server logo
 You can add your own server logo, to do this you need to make an [issue](https://github.com/le01q/samp-fresh/issues) with the next configuration
 
 - `Title:` your server name
@@ -28,7 +28,7 @@ You can add your own server logo, to do this you need to make an [issue](https:/
 <img src="https://github.com/le01q/samp-fresh/blob/main/assets/rpc.png?raw=true" title="rpc">
 
 
-## 🖼️Pictures
+## 🖼️ Pictures
 <p align="center">
   <img src="https://github.com/le01q/samp-fresh/blob/main/assets/program.png?raw=true" title="example">
   <img src="https://github.com/le01q/samp-fresh/blob/main/assets/cli.JPG?raw=true">
