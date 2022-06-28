@@ -2,7 +2,7 @@
 Custom Launcher for SA:MP with new features
 
 ## ⏬Download
-The lastest release is available [here](https://github.com/manucabral/acc-discord-rpc/releases)
+The lastest release is available [here](https://github.com/le01q/samp-fresh/releases)
 
 ## ✨Features
 - Save/remove your favourite servers
